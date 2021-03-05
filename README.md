@@ -5,6 +5,7 @@ Finding a good DX for `props` in Typescript and React.
 ## Best practices
 
 See [Typescript wiki](https://github.com/microsoft/TypeScript/wiki/Performance).
+See [React TypeScript Cheatsheets](https://react-typescript-cheatsheet.netlify.app/)
 
 ### 1. Preferring Interfaces Over Intersections
 
@@ -46,3 +47,14 @@ export function useExample3e(props: TExample) {
   return props2;
 }
 ```
+
+## Components
+
+- Function signature, Default props should follow the rule above.
+
+However:
+
+### Return type
+
+- By default `JSX.Element` is added to function return type. (See it when hover on a component declared without return type like `export function Example1(props: TExample) {}`)
+- So when we don't add a return type still don't break Best practices rules. (???) The code looks inconsistent compared to `.ts` but inferring works fine.

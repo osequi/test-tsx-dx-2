@@ -7,6 +7,11 @@ import {
   useExample3c,
   useExample3d,
   useExample3e,
+  Example1,
+  Example1a,
+  Example1b,
+  Example1c,
+  Example2,
 } from "../examples";
 
 export default function Home() {
@@ -67,6 +72,29 @@ export default function Home() {
           null,
           2
         )}
+      </li>
+      <li>
+        <hr />
+      </li>
+      <li>
+        Component example 1:
+        <Example1 name="alika" options={{ param2: "ok" }} />
+      </li>
+      <li>
+        Component example 1a:
+        <Example1a name="alika" options={{ param2: "ok" }} />
+      </li>
+      <li>
+        Component example 1b:
+        <Example1b name="alika" options={{ param2: "ok" }} />
+      </li>
+      <li>
+        Component example 1c:
+        <Example1c name="alika" options={{ param2: "ok" }} />
+      </li>
+      <li>
+        Component example 2:
+        <Example2 />
       </li>
     </ul>
   );
