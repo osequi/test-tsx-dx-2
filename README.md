@@ -14,6 +14,22 @@ See [Typescript wiki](https://github.com/microsoft/TypeScript/wiki/Performance).
 
 - Adding type annotations, especially return types, can save the compiler a lot of work.
 
-## Problems
+### 3. Preferring Base Types Over Unions
 
-- The perfect hover duplicates two times the interface definition and should have no return type.
+- instead `Interface1 | Interface2` use `extend`
+
+## Props destructuring
+
+### Bad news
+
+- The perfect hover (destructured signature) duplicates two times the interface definition and should have no return type. (example1)
+- Return types always break the hover info both when props in the signature are destructured or not. (example1)
+
+### Good news
+
+- When signature is not destructured but later `props` is destructured we got proper type info on hover. (example2)
+- This is good news only when starting to write code. Hovering in another file gives no hints...
+
+### Solution
+
+- perfect hover is not achievable => don't rush for it => don't destructure in signature => use `props` and avoid duplication

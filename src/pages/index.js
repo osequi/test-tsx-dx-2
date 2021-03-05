@@ -1,4 +1,4 @@
-import { useExample1, useExample2 } from "../examples";
+import { useExample1, useExample1c } from "../examples";
 
 export default function Home() {
   const example = {
@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <ul>
       <li>Example1: {JSON.stringify(useExample1(example), null, 2)}</li>
-      <li>Example2: {JSON.stringify(useExample2(example), null, 2)}</li>
+      <li>Example2: {JSON.stringify(useExample1c(example), null, 2)}</li>
     </ul>
   );
 }

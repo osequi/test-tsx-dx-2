@@ -1,28 +1,8 @@
-export type TVariants = "Variant1" | "Variant2";
+import { TExample } from "./example";
 
-export interface TExample {
-  variant: TVariants;
-  name: string | string[];
-  number: number | number[];
-  options?: {
-    param1: {
-      entry1: string;
-    };
-    param2: string;
-  };
-}
-
-const example: TExample = {
-  variant: "Variant1",
-  name: null,
-  number: null,
-  options: {
-    param1: {
-      entry1: "entry1",
-    },
-    param2: "param2",
-  },
-};
+/**
+ * Task: display all props
+ */
 
 /**
  * * Successes:
@@ -109,6 +89,24 @@ export function useExample1a({
 }
  * ```
  */
-export function useExample2(props: TExample) {
+export function useExample1c(props: TExample) {
+  return props;
+}
+
+/**
+ * Problems
+ * 
+ * 1. On hover no info at all
+ * ```
+ * function useExample2a(props: TExample): TExample
+ * ```
+ * 2. On `ctrl+hover` only partial info is shown:
+ * ```
+ * export function useExample2a(props: TExample): TExample {
+  return props;
+}
+ * ```
+ */
+export function useExample1b(props: TExample): TExample {
   return props;
 }
