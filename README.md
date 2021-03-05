@@ -18,7 +18,7 @@ See [Typescript wiki](https://github.com/microsoft/TypeScript/wiki/Performance).
 
 - instead `Interface1 | Interface2` use `extend`
 
-## Props destructuring
+## Function signature
 
 ### Bad news
 
@@ -33,3 +33,16 @@ See [Typescript wiki](https://github.com/microsoft/TypeScript/wiki/Performance).
 ### Solution
 
 - perfect hover is not achievable => don't rush for it => don't destructure in signature => use `props` and avoid duplication
+
+## Default props
+
+- `useExample3(props: TExample = defaultProps)` this doesn't work (with deep objects).
+- This doesn't works: https://react-spectrum.adobe.com/react-aria/mergeProps.html
+- This works (from lodash):
+
+```
+export function useExample3e(props: TExample) {
+  const props2 = defaultsDeep(props, defaultProps);
+  return props2;
+}
+```
