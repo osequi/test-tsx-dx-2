@@ -4,3 +4,6 @@ export * from "./example2";
 export * from "./example3";
 export * from "./Example1";
 export * from "./Example2";
+export * from "./example4";
+export * from "./example5";
+export * from "./Example5";

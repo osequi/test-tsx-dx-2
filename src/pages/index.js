@@ -12,6 +12,8 @@ import {
   Example1b,
   Example1c,
   Example2,
+  useExample5,
+  Example5,
 } from "../examples";
 
 export default function Home() {
@@ -95,6 +97,24 @@ export default function Home() {
       <li>
         Component example 2:
         <Example2 />
+      </li>
+      <li>
+        <hr />
+      </li>
+      <li>Null example 1: {JSON.stringify(useExample5(), null, 2)}</li>
+      <li>
+        Null example 1a:{" "}
+        {JSON.stringify(
+          useExample5({ name: "alika", options: { param2: "ok" } }),
+          null,
+          2
+        )}
+      </li>
+      <li>
+        Null Example 1: <Example5 />
+      </li>
+      <li>
+        Null Example 1a: <Example5 name="alika" options={{ param2: "ok" }} />
       </li>
     </ul>
   );

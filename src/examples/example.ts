@@ -10,6 +10,7 @@ export interface TExample {
     };
     param2: string;
   };
+  iterable?: string[];
 }
 
 export const defaultProps: TExample = {
@@ -22,4 +23,5 @@ export const defaultProps: TExample = {
     },
     param2: "param2",
   },
+  iterable: null,
 };

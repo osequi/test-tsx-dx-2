@@ -33,7 +33,7 @@ See [React TypeScript Cheatsheets](https://react-typescript-cheatsheet.netlify.a
 
 ### Solution
 
-- perfect hover is not achievable => don't rush for it => don't destructure in signature => use `props` and avoid duplication
+- Perfect hover is not achievable => don't rush for it => don't destructure in signature => use `props` and avoid duplication
 
 ## Default props
 
@@ -47,6 +47,20 @@ export function useExample3e(props: TExample) {
   return props2;
 }
 ```
+
+## Function signatures + Default props
+
+When these combined props simply cannot be destructured in function signature. It results in an ugly destructuring repetition. See `example4`.
+
+```
+export function useExample4({ variant, name, number, options }: TExample) {
+  const props2 = defaultsDeep({ variant, name, number, options }, defaultProps);
+}
+```
+
+## Nulls
+
+When default props are used there will be no destructuring errors like `property not defined`. See `example5, Example5`.
 
 ## Components
 
