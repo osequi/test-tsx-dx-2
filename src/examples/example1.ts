@@ -67,12 +67,7 @@ export function useExample1a({
   number,
   options,
 }: TExample): TExample {
-  return {
-    variant: variant,
-    name: name,
-    number: number,
-    options: options,
-  };
+  return null;
 }
 
 /**
